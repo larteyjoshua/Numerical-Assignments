@@ -24,7 +24,7 @@ yData = np.array([0,5,-4,12,3,0])
 a = coeffts(xData,yData)
 print(" x yInterp")
 print("-----------------------")
-for x in np.arange(-3,3):
+for x in np.arange(-3,4,1):
     y = evalPoly(a,xData,x)
     print('{:3.1f} {:9.5f}'.format(x,y))
 input("\nPress return to exit")

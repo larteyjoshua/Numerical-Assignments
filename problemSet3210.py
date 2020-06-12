@@ -93,8 +93,8 @@ def stdDev(c,xData,yData):
     return sigma
 
 
-xData = np.array([0,1.525,3.050,4.575,6.10,7.625,9.150])
-yData = np.array([1,0.8617,0.7385,0.6292,0.5328,0.4481,0.3741])
+xData = np.array([1718,1767,1774,1775,1792,1816,1828,1834,1878,1906])
+yData = np.array([0.5,0.8,1.4,2.7,4.5,7.5,12.0,17.0,17.2,23.0])
 while True:
     try:
         m = eval(input("\nDegree of polynomial ==> "))
@@ -103,8 +103,8 @@ while True:
         print("Std. deviation =",stdDev(coeff,xData,yData))
         print(coeff[0])
         print(coeff[1])
-        x=10.5
-        y= coeff[0]-(coeff[1]*x)
-        print("The Relative density at x=10.5 is:\n",y)
+        x=2000
+        y= coeff[0]+(coeff[1]*x)
+        print("The Thermal Efficiency at x=2000 is:\n",y)
     except SyntaxError: break
 input("Finished. Press return to exit")
