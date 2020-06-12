@@ -95,16 +95,16 @@ def stdDev(c,xData,yData):
 
 xData = np.array([1718,1767,1774,1775,1792,1816,1828,1834,1878,1906])
 yData = np.array([0.5,0.8,1.4,2.7,4.5,7.5,12.0,17.0,17.2,23.0])
-while True:
-    try:
-        m = eval(input("\nDegree of polynomial ==> "))
-        coeff = polyFit(xData,yData,m)
-        print("Coefficients are:\n",coeff)
-        print("Std. deviation =",stdDev(coeff,xData,yData))
-        print(coeff[0])
-        print(coeff[1])
-        x=2000
-        y= coeff[0]+(coeff[1]*x)
-        print("The Thermal Efficiency at x=2000 is:\n",y)
-    except SyntaxError: break
-input("Finished. Press return to exit")
+# while True:
+#     try:
+m = 1 #eval(input("\nDegree of polynomial ==> "))
+coeff = polyFit(xData,yData,m)
+print("Coefficients are:\n",coeff)
+print("Std. deviation =",stdDev(coeff,xData,yData))
+print("a= ",coeff[0])
+print("b= ",coeff[1])
+x=2000
+y= coeff[0]+(coeff[1]*x)
+print("The Thermal Efficiency at x=2000 is:\n",y)
+#     except SyntaxError: break
+# input("Finished. Press return to exit")

@@ -14,17 +14,17 @@ def evalPoly(a,xData,x):
     return p
 
 def coeffts(xData,yData):
-    m = len(xData) # Number of data points
+    m= 3 # Number of data points
     a = yData.copy()
     for k in range(1,m):
         a[k:m] = (a[k:m] - a[k-1])/(xData[k:m] - xData[k-1])
     return a
-xData = np.array([0,21.1,37.8,54.4,71.1,87.8,100])
-yData = np.array([1.79,1.13,0.696,0.519,0.338,0.321,0.296])
+xData = np.array([0,0.5,1,1.5,2,2.5,3])
+yData = np.array([1.8421,2.4694,2.4921,1.9047,0.8509,-0.4112,-1.5727])
 a = coeffts(xData,yData)
 print(" x yInterp")
 print("-----------------------")
-for x in [10,30,60,90]:
+for x in [0]:
     y = evalPoly(a,xData,x)
     print('{:3.1f} {:9.5f}'.format(x,y))
-# input("\nPress return to exit")
+input("\nPress return to exit")

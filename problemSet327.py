@@ -95,16 +95,16 @@ def stdDev(c,xData,yData):
 
 xData = np.array([0,1.525,3.050,4.575,6.10,7.625,9.150])
 yData = np.array([1,0.8617,0.7385,0.6292,0.5328,0.4481,0.3741])
-while True:
-    try:
-        m = eval(input("\nDegree of polynomial ==> "))
-        coeff = polyFit(xData,yData,m)
-        print("Coefficients are:\n",coeff)
-        print("Std. deviation =",stdDev(coeff,xData,yData))
-        print(coeff[0])
-        print(coeff[1])
-        x=10.5
-        y= coeff[0]-(coeff[1]*x)
-        print("The Relative density at x=10.5 is:\n",y)
-    except SyntaxError: break
-input("Finished. Press return to exit")
+# while True:
+#     try:
+m = 1
+coeff = polyFit(xData,yData,m)
+print("Coefficients are:\n",coeff)
+print("Std. deviation =",stdDev(coeff,xData,yData))
+print("a= ",coeff[0])
+print("b= ",coeff[1])
+x=10.5
+y= coeff[0]+(coeff[1]*x)
+print("The Relative density at x=10.5 is:\n",y)
+    # except SyntaxError: break
+# input("Finished. Press return to exit")
