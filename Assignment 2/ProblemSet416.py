@@ -1,3 +1,19 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+x = np.linspace(-10,10,num=100)
+fx=[]
+for i in range(len(x)):
+    fx.append((math.sin(x[i])) + (3*math.cos(x[i])) -2) #math.sin(x) + 3*math.cos(x)-2
+
+
+plt.plot(x,fx)
+plt.grid()
+plt.axvline()
+plt.axhline()
+plt.show()
 ## module newtonRaphson
 ''' root = newtonRaphson(f,df,a,b,tol=1.0e-9).
 Finds a root of f(x) = 0 by combining the Newton-Raphson
@@ -35,7 +51,7 @@ def newtonRaphson(f,df,a,b,tol=1.0e-9):
         if abs(dx) < tol*max(abs(b),1.0): return x
     print('Too many iterations in Newton-Raphson')
 
-import math
+
 def f(x): return math.sin(x) + 3*math.cos(x)-2
 def df(x): return math.cos(x) - 3*math.sin(x)
 print("Leftmost roots")

@@ -1,3 +1,18 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10,10,num=100)
+fx=[]
+for i in range(len(x)):
+    fx.append(x[i]**3 - 3.23*x[i]**2+ 5.54*x[i] + 9.84) #x**3 - 3.23*x**2 - 5.54*x + 9.84
+
+
+plt.plot(x,fx)
+plt.grid()
+plt.axvline()
+plt.axhline()
+plt.show()
 ## module bisection
 ''' root = bisection(f,x1,x2,switch=0,tol=1.0e-9).
 Finds a root of f(x) = 0 by bisection.
