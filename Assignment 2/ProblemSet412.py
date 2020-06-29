@@ -44,6 +44,6 @@ def bisection(f,x1,x2,switch=1,tol=1.0e-9):
     return (x1 + x2)/2.0
 
 def f(x): return x**3 - 3.23*x**2 - 5.54*x + 9.84
-x = bisection(f, 1, 2, tol = 1.0e-9)
+x = bisection(f, 0, 2, tol = 1.0e-9)
 print('x =', '{:6.4f}'.format(x))
 input("Press return to exit")
